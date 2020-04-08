@@ -1,0 +1,13 @@
+<% if obj.errors.any? %>
+  <div class="card border-danger mb-3 col-8 offset-2">
+    <div class="card-body text-danger card-body1">
+      <h5 class="card-title card-title1"><%= pluralize(obj.errors.count, "Error") %>
+        found:</h5>
+      <ul>
+        <% obj.errors.full_messages.each do |msg|%>
+          <li class="card-text"><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to 'Courses', root_path, class: "nav-link nav-link1"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Students', students_path, class: "nav-link nav-link1"%>
+        </li>
+        <li class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Account
+          </a>
+          <div class="dropdown-menu my-drop" aria-labelledby="navbarDropdown">
+            <% if logged_in %>
+              <%= link_to 'Profile', student_path(current_student),  class: "dropdown-item"%>
+              <%= link_to 'Log out', logout_path, method: :delete, class: "dropdown-item"%>
+            <% else %>
+              <%= link_to 'Log in', login_path, class: "dropdown-item"%>
+              <%= link_to 'Sign up', signup_path, class: "dropdown-item"%>
+            <% end %>
+          </div>
+        </li>
+        <% if logged_in %>
+        <li class="nav-item">
+          <p class="nav-link nav-link1 "> <span class="badge badge-secondary"><strong>Hello <%= current_student.name %></strong></span></p>
+        </li>
+        <% end %>
+      </ul>
+      <%= link_to 'Tech University', root_path, class: "navbar-brand"%>
+      <i class="fas fa-university fa-3x"></i>
+    </div>
+  </div>
+</nav>

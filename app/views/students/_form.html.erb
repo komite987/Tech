@@ -1,0 +1,24 @@
+<%= render 'layouts/errors', obj:@student %>
+<div class="row ">
+  <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-10 offset-1">
+    <%= form_with(model: @student, local:true) do |f| %>
+    <br>
+    <p class="h2 mb-4 text-center"> <%= @student.new_record? ? 'Sign up' : 'Update account' %></p>
+      <%= f.label :name%>
+      <%= f.text_field :name, class:"form-control mb-4", placeholder:"Enter your name"%>
+      <%= f.label :email%>
+      <%= f.email_field :email, class:"form-control mb-4", placeholder:"Enter your email" %>
+      <%= f.label :password%>
+      <%= f.password_field :password, class:"form-control mb-4", placeholder:"Choose a password" %>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, class:"form-control mb-4", placeholder:"Confirm your password" %>
+
+    <div class="submit-button">
+      <button class="btn btn-danger btn-block text-center" type="submit">
+        <%= @student.new_record? ? 'Sign up' : 'Update' %></button>
+    </div>
+    <br>
+  </div>
+<% end %>
+</div>
+<br>

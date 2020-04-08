@@ -1,0 +1,19 @@
+<div class="row ">
+  <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-10 offset-1">
+    <%= form_with(scope: :logins, local:true) do |f| %>
+    <br>
+    <p class="h2 mb-4 text-center"> Log in</p>
+      <%= f.label :email%>
+      <%= f.email_field :email, class:"form-control mb-4", placeholder:"Enter your email",autofocus: true %>
+      <%= f.label :password%>
+      <%= f.password_field :password, class:"form-control mb-4", placeholder:"Enter a password" %>
+
+    <div class="submit-button">
+      <button class="btn btn-danger btn-block text-center" type="submit">
+        Log in</button>
+    </div>
+    <br>
+  </div>
+<% end %>
+</div>
+<br>

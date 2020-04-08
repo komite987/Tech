@@ -1,0 +1,160 @@
+@import 'bootstrap/dist/css/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Domine&display=swap');
+
+.title {
+  font-family: 'Domine', serif;
+  font-weight: bolder;
+}
+
+.footer2 {
+  width: 100%;
+  background-color: #495464 !important;
+  margin-bottom: 0;
+  padding: 10px 0;
+}
+.bg-custom, .my-drop {
+  background-color: #ee8796;
+}
+
+.my-drop a {
+  color: #fff;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.navbar-brand {
+  font-size: 1.45em;
+  font-weight: bolder;
+  font-family: 'Fjalla One', sans-serif;
+
+}
+.nav-link {
+  font-family: 'Fjalla One', sans-serif;
+  color: white !important;
+  font-size: 1.1em !important;
+  margin: 0 10px;
+}
+.nav-item:hover a, #navbarDropdown:hover, .dropdown-item:hover  {
+  background-color: #495464;
+  color: white !important;
+}
+
+.btn-outline-secondary {
+  color: #f6e5e4
+}
+
+.left-footer {
+  margin-left: 15%;
+  color: white;
+}
+.right-footer {
+  float: right;
+  margin-right: 15%;
+  color: white;
+
+}
+
+.footer1 {
+  padding-bottom: 20px;
+}
+html,
+body {
+  height: 100vh;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+  padding-bottom: 0 !important;
+}
+
+.fa-3x {
+  color: #fff;
+}
+
+.footer-link  {
+  list-style-type: none;
+  padding-inline-start: 0;
+  & li a {
+    color: white;
+  }
+}
+
+.h-300 {
+  background-color: #495464;
+  color: white;
+}
+
+.offset-md-2 {
+  border-radius: 15px;
+  border: 1px solid #e3e3e3;
+  box-shadow: 5px 5px 3px grey;
+  padding: 10px auto;
+}
+
+.btn-block {
+  width: 30%;
+  margin: 0 auto !important;
+}
+
+.card-body1  {
+  padding: 0;
+}
+.card-body1 ul{
+  padding-bottom: 0 !important;
+}
+.card-title1 {
+  padding-bottom: 0 !important;
+  margin-bottom: 0;
+}
+
+.notification {
+  margin-top: 15px;
+}
+
+.btn1 {
+  background-color: #ee8796 !important; /* Blue background */
+  border: none !important; /* Remove borders */
+  color: white !important; /* White text */
+  padding: 5px 16px !important; /* Some padding */
+  font-size: 16px !important; /* Set a font size */
+  cursor: pointer !important; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn1:hover {
+  background-color: #ff3385 !important;
+}
+
+.index {
+  color: white;
+  &:hover {
+    color: white;
+    background-color: #ee8796;
+    text-decoration: none;
+  }
+}
+
+.course-link {
+  color: #ebd88c;
+  &:hover {
+    color: #f7e9b1;
+  }
+}
+
+.footer-text {
+  color: white;
+  font-weight: bold;
+}
+
+.badge-secondary {
+  padding: 8px 12px;
+  font-size: 0.7em;
+}
+
+.courses {
+  margin-bottom: 5px;
+}

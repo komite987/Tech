@@ -1,0 +1,25 @@
+<div class="col mb-4">
+  <div class="card h-300 col-6 offset-3">
+    <div class="card-body">
+      <h5 class="card-title"><%= @student.name %></h5>
+      <p class="card-text"><%= @student.email %></p>
+
+      <p class="card-text courses">Cousre Enrollments: <% if @student.courses.empty? %> None
+      <% else %>
+      <ul>
+        <% @student.courses.each do |course| %>
+        <li>
+        <%= course.name %>
+      </li>
+        <% end %>
+      </ul>
+      <% end %>
+      </p>
+      <div>
+        <% if current_student == @student %>
+        <%= link_to '<button class="btn btn-danger btn1"><i class="fa fa-edit"></i> Edit</button>'.html_safe, edit_student_path(@student) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
